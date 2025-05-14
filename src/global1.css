@@ -1,0 +1,586 @@
+/** **************************************
+* Fonts: app
+*************************************** */
+@import '@fontsource-variable/dm-sans';
+@import '@fontsource/barlow/400.css';
+@import '@fontsource/barlow/500.css';
+@import '@fontsource/barlow/600.css';
+@import '@fontsource/barlow/700.css';
+@import '@fontsource/barlow/800.css';
+
+/** **************************************
+* Plugins
+*************************************** */
+/* scrollbar */
+@import './components/scrollbar/styles.css';
+
+/* chart */
+@import './components/chart/styles.css';
+
+/** **************************************
+* Baseline
+*************************************** */
+html {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body,
+#root,
+#root__layout {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 100%;
+  flex-direction: column;
+    background-color: black;
+    background-image: linear-gradient(-45deg, #300909, #212c12, #382e0b, #281e4b, #29193c);
+        color: #fff !important;
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+body{
+margin-right:0px ;}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  color: white !important;
+  padding: 5px 5px; }
+
+
+
+
+/* Header Styles */
+.dashboard-header {
+  background-image: url(/public/Graphic\ Side.png);  
+  padding: 8%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+height: 300px;
+
+}
+
+.dashboard-header::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -100px;
+  left: -50px;
+  background: radial-gradient(circle, rgba(163, 44, 44, 0.1) 0%, rgba(255,255,255,0) 60%);
+  transform: rotate(-15deg);
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  font-size: 1.23rem ;
+  text-align: left;
+  color:rgb(238, 217, 217);
+}
+
+/* Main Content */
+.dashboard-content {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-top: 30px;
+
+}
+
+.search-bar .MuiOutlinedInput-root {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  color: white;
+  padding: 10px;
+  width: 50%;
+  border: #fff 2px solid;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.search-bar .MuiOutlinedInput-input {
+  padding: 10px 10px;
+}
+
+.search-icon {
+  color: rgba(252, 235, 235, 0.979);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-header {
+    padding: 60px 30px;
+  }
+
+  .app-title {
+    font-size: 1.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  .dashboard-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar .MuiOutlinedInput-root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 40px 20px;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .dashboard-subtitle {
+    font-size: 1rem;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .stat-value {
+    font-size: 1.6rem;
+  }
+
+  .search-bar {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 40px 20px 40px 50px;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .app-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.95rem;
+    margin-left: 20px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .dashboard-content {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .search-bar .MuiOutlinedInput-root {
+    width: 70%;
+    padding: 4px;
+    margin-left: 15px;
+    border-radius: 20px;
+  }
+}
+/* ############################ PAGE-  RULES GENERATOR ############################ */
+.rules-page {
+  max-width: 95%;
+  width: 1281px;
+  margin: 52px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.page-heading {
+ margin-left: 30px;
+  gap: 1.25rem;
+  max-width: 100%;
+  color: white;
+
+}
+
+.page-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #f9fafb;
+}
+
+.page-heading p {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: start;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.rules-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%;
+  margin-left: 50px;
+}
+
+.input-box {
+  width: 100%;
+  background: rgba(109, 90, 130, 0.43);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.input-left,
+.input-right {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.input-label {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.input-field {
+  background: rgba(51, 41, 63, 0.43);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+}
+
+.generate-button {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 342px;
+  height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to right,
+    rgba(19, 158, 188, 0.46),
+    rgba(170, 30, 205, 0.46)
+  );
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.magic-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.info-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.info-box {
+  background: linear-gradient(
+      302.83deg,
+      rgba(137, 23, 26, 0.15) 4.17%,
+      rgba(107, 142, 59, 0.15) 37.09%,
+      rgba(212, 175, 51, 0.15) 53.55%,
+      rgba(58, 45, 107, 0.15) 70.01%,
+      rgba(41, 25, 60, 0.15) 135.86%
+    ),
+    #29193c;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  margin-bottom: 10px;
+}
+
+.info-header h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: white;
+}
+
+.toggle-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info-box p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+.action-buttons {
+  display: flex;
+  flex-direction: row; /* Always stay in a row */
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.edit-button,
+.apply-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: 10px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap; /* Prevent text from breaking into new line */
+}
+
+.edit-button {
+  background-color: #87739e;
+}
+
+.apply-button {
+  background: linear-gradient(
+    90.54deg,
+    rgba(19, 158, 188, 0.46) 36.69%,
+    rgba(170, 30, 205, 0.46) 91.01%
+  );
+}
+/* RESPONSIVENESS */
+
+@media (max-width: 1440px) {
+  .rules-page {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .page-heading h2 {
+    font-size: 1.4rem;
+  }
+  .page-heading p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rules-page {
+    width: 95%;
+    margin: 40px auto;
+  }
+  .page-heading {
+    align-items: center;
+  }
+  .generate-button {
+    align-self: center;
+  }
+  .input-box {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+  .generate-button {
+    height: 60px;
+    font-size: 1rem;
+  }
+  .info-box {
+    padding: 1.5rem;
+  }
+  .input-box {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-heading h2 {
+    font-size: 1.3rem;
+  }
+  .page-heading p {
+    font-size: 1.1rem;
+  }
+  .input-label {
+    font-size: 0.95rem;
+  }
+  .info-header h2 {
+    font-size: 0.95rem;
+  }
+  .info-box p {
+    font-size: 0.85rem;
+  }
+  .input-box {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .rules-page {
+    width: 95%;
+    margin: 30px auto;
+  }
+  .page-heading h2 {
+    font-size: 1.2rem;
+  }
+  .page-heading p {
+    font-size: 1rem;
+  }
+  .input-label {
+    font-size: 0.875rem;
+  }
+  .info-header h2 {
+    font-size: 0.875rem;
+  }
+  .info-box p {
+    font-size: 0.8125rem;
+  }
+  .input-box {
+    flex-direction: column;
+  }
+}
+/* PAGE CONTAINER - Center align and responsive */
+.page-container {
+  margin: 40px auto; /* Center horizontally */
+  max-width: 1280px;
+  width: 90%; /* Responsive width */
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  position: relative; /* Changed from absolute */
+}
+
+/* Remove fixed left positioning from any element like .frame-one */
+.frame-one,
+.frame-three,
+.frame-47708 {
+  width: 100%; /* Full container width */
+  max-width: 1280px;
+}
+
+/* Main frame styling */
+.frame-47708 {
+  padding: 25px;
+  background: rgba(62, 40, 88, 0.33);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 25px;
+  width: 100%;
+}
+
+/* Main content inside the card */
+.main-content {
+  width: 100%;
+  max-width: 1230px;
+  height: auto;
+  padding: 0;
+  gap: 38px;
+}
+
+/* Input Section */
+.input-section {
+  width: 100%;
+  height: auto;
+}
+
+/* Label */
+.input-label {
+  width: 100%;
+}
+
+/* Input box styling */
+.custom-input {
+  width: 100%;
+}
+
+/* Placeholder inside input box */
+.input-placeholder {
+  left: 16px;
+  top: 8px;
+}
