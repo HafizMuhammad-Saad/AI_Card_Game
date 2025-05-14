@@ -49,6 +49,11 @@
     "react-konva": "^19.0.3",
     "react-router-dom": "^7.4.1",
     "react-tracking": "^9.3.2",
+    "overrides": {
+    "react-tracking": {
+      "react": "$react" 
+    }
+  },
     "simplebar-react": "^3.3.0",
     "use-image": "^1.1.1"
   },
