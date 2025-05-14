@@ -1,3 +1,4 @@
+import 'simplebar-react/dist/simplebar.min.css';
 
 import SimpleBar from 'simplebar-react';
 import { mergeClasses } from 'minimal-shared/utils';
